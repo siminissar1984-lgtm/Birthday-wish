@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 19th Birthday, Salwa! ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #fff8f5;
+  color: #594752;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 75px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, #fff0f3, #fff8ed, #f4edff);
+  position: relative;
+  overflow: hidden;
+}
+
+.tag {
+  background: white;
+  padding: 9px 19px;
+  border-radius: 30px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #bd829b;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(43px, 10vw, 75px);
+  color: #b66e8c;
+  line-height: 1.15;
+}
+
+h1 span { font-style: italic; color: #d99ab0; }
+
+.subtitle {
+  margin-top: 17px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #806c78;
+}
+
+.cake {
+  font-size: 100px;
+  margin: 25px 0;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce { 50% { transform: translateY(-10px); } }
+
+button { border: none; cursor: pointer; font-family: inherit; transition: .25s; }
+
+.main-btn {
+  background: #c77f9d;
+  color: white;
+  padding: 15px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  box-shadow: 0 7px 20px #d9a9bb55;
+}
+
+.main-btn:hover { transform: translateY(-3px); background: #b66e8c; }
+
+.small-note { margin-top: 15px; font-size: 12px; color: #a38d99; }
+
+section { padding: 75px 22px; }
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #b66e8c;
+  margin-bottom: 18px;
+}
+
+.message-card {
+  max-width: 520px;
+  margin: 30px auto;
+  background: white;
+  padding: 32px 27px;
+  border-radius: 25px;
+  box-shadow: 0 10px 35px #b66e8c12;
+  text-align: left;
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+.message-card .dear {
+  font-family: 'Playfair Display', serif;
+  color: #bd7895;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.message-card p { margin-bottom: 15px; }
+
+.signature {
+  color: #bd7895;
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  margin-top: 20px;
+}
+
+.surprise { background: #fff0f3; }
+
+.gift-box {
+  background: white;
+  border-radius: 22px;
+  max-width: 360px;
+  margin: 25px auto;
+  padding: 30px 20px;
+  box-shadow: 0 8px 25px #b66e8c12;
+}
+
+.gift { font-size: 65px; margin-bottom: 15px; cursor: pointer; transition: .3s; }
+.gift:hover { transform: rotate(-10deg) scale(1.1); }
+
+.hidden-message {
+  display: none;
+  margin-top: 18px;
+  line-height: 1.8;
+  font-size: 14px;
+  color: #886778;
+}
+
+footer {
+  padding: 40px 20px;
+  background: #f8e9ef;
+  color: #a77a90;
+  font-size: 13px;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: floatUp 6s linear forwards;
+  z-index: 5;
+}
+
+@keyframes floatUp {
+  to { transform: translateY(-110vh) rotate(30deg); opacity: 0; }
+}
+
+canvas { position: fixed; inset: 0; pointer-events: none; z-index: 10; }
+
+.gallery { background: #fffaf8; }
+
+.gallery-subtitle {
+  margin: 0 auto 28px;
+  color: #927888;
+  font-size: 14px;
+}
+
+.photo-grid {
+  max-width: 850px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.photo-card {
+  background: white;
+  padding: 12px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px #b66e8c18;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.photo-card p { margin-top: 12px; font-size: 13px; color: #927888; }
+
+@media(max-width: 480px) {
+  .hero { padding: 60px 18px; }
+  .message-card { padding: 25px 21px; }
+  section { padding: 60px 18px; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-card img { height: 260px; }
+}.reasons-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    max-width: 950px;
+    margin: 30px auto;
+}
+
+.reason-card {
+    background: rgba(255,255,255,0.8);
+    border: 1px solid #f2dce7;
+    border-radius: 18px;
+    padding: 20px;
+    color: #725365;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(180,130,150,0.08);
+}
+
+.reason-card span {
+    display: block;
+    color: #c27b9d;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.reason-card p {
+    margin: 0;
+    line-height: 1.5;
+}
+</style>
+</head>
+
+<body>
+<canvas id="confetti"></canvas>
+
+<div class="hero">
+  <div class="tag">A LITTLE SOMETHING JUST FOR YOU ♡</div>
+  <h1>Happy 19th,<br><span>Salwa!</span></h1>
+  <p class="subtitle">
+    A whole new chapter, another year of you.<br>
+    And a little reminder that you're loved, always.
+  </p>
+  <div class="cake">🎂</div>
+  <button class="main-btn" onclick="celebrate()">Open your birthday surprise ♡</button>
+  <p class="small-note">Made with love, from your brother.</p>
+</div>
+
+<section class="reasons-section">
+
+    <div class="section-title">
+        19 Reasons Why We Love You ♡
+    </div>
+
+    <div class="section-subtitle">
+        One for every year of being our favourite Salwa!
+    </div>
+
+    <div class="reasons-grid">
+
+        <div class="reason-card"><span>01 ♡</span><p>Your smile can brighten anyone's day.</p></div>
+        <div class="reason-card"><span>02 ♡</span><p>You make ordinary moments special.</p></div>
+        <div class="reason-card"><span>03 ♡</span><p>Your laugh is absolutely contagious.</p></div>
+        <div class="reason-card"><span>04 ♡</span><p>You have the biggest heart.</p></div>
+        <div class="reason-card"><span>05 ♡</span><p>You're effortlessly funny.</p></div>
+        <div class="reason-card"><span>06 ♡</span><p>You make everyone feel at home.</p></div>
+        <div class="reason-card"><span>07 ♡</span><p>You care more than you let on.</p></div>
+        <div class="reason-card"><span>08 ♡</span><p>You're our favourite little troublemaker.</p></div>
+        <div class="reason-card"><span>09 ♡</span><p>You always find a way to make us smile.</p></div>
+        <div class="reason-card"><span>10 ♡</span><p>You're beautiful inside and out.</p></div>
+        <div class="reason-card"><span>11 ♡</span><p>You make the best memories.</p></div>
+        <div class="reason-card"><span>12 ♡</span><p>You bring happiness wherever you go.</p></div>
+        <div class="reason-card"><span>13 ♡</span><p>You're stronger than you realise.</p></div>
+        <div class="reason-card"><span>14 ♡</span><p>You have your own special kind of magic.</p></div>
+        <div class="reason-card"><span>15 ♡</span><p>You're someone we can always count on.</p></div>
+        <div class="reason-card"><span>16 ♡</span><p>Life is never boring with you around.</p></div>
+        <div class="reason-card"><span>17 ♡</span><p>You're loved even on your most annoying days.</p></div>
+        <div class="reason-card"><span>18 ♡</span><p>You'll always be our little girl.</p></div>
+        <div class="reason-card"><span>19 ♡</span><p>Simply because you're YOU, Salwa. ♡</p></div>
+
+    </div>
+
+    <p style="font-family:'Playfair Display',serif; font-size:20px; color:#a36d87; margin-top:30px;">
+        19 years of you, and we'd choose you every single time. ♡
+    </p>
+
+</section><section>
+  <div class="section-title">A little message for you ♡</div>
+  <div class="message-card">
+    <div class="dear">Dear Salwa,</div>
+    <p>Happy 19th birthday!!</p>
+    <p>
+      I know this birthday is a little different from all the
+      others. It's your first one without everyone around,
+      and I wish we could all be there to celebrate with you
+      like we usually do.
+    </p>
+    <p>
+      But I hope you never feel like being away means you're
+      any less surrounded by love. No matter how far apart
+      we are, you're still a huge part of our everyday lives.
+    </p>
+    <p>
+      I hope 19 brings you the happiest memories, new
+      adventures, unexpected blessings and so many reasons
+      to smile. Keep being the person you are, and never
+      forget how much you mean to all of us.
+    </p>
+    <p>
+      And please save us some birthday cake. You don't get
+      to celebrate without us AND eat all the cake. 😂
+    </p>
+    <p>
+      Missing you extra today. Have the best birthday,
+      you deserve every bit of happiness coming your way.
+    </p>
+    <div class="signature">Love you, always ♡<br>Your annoying little brother.</div>
+  </div>
+</section>
+
+<section class="surprise">
+  <div class="section-title">One more thing...</div>
+  <p style="font-size:14px; color:#927888;">There's a little surprise waiting for you.</p>
+  <div class="gift-box">
+    <div class="gift" onclick="openGift()">🎁</div>
+    <p style="font-weight:600;">A little reminder</p>
+    <button class="main-btn" onclick="openGift()" style="margin-top:18px;">Tap to unwrap ♡</button>
+    <div class="hidden-message" id="giftMessage">
+      <div style="font-size:35px;">🏡💗</div>
+      <h3 style="font-family:'Playfair Display'; margin:10px;">Home is always with you.</h3>
+      No matter where life takes you, you will always have
+      a place, a family and people who are cheering for you.
+      Distance changes the location, never the love.
+      <br><br>
+      Now go enjoy your birthday, Salwa! ♡
+    </div>
+  </div>
+</section>
+
+<footer>
+  Made especially for Salwa ♡<br><br>
+  19 looks like a lovely chapter already.
+  <br>With love, from your brother.
+</footer>
+
+<script>
+const canvas = document.getElementById("confetti");
+const ctx = canvas.getContext("2d");
+let pieces = [];
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener("resize", resize);
+
+function celebrate() {
+  pieces = [];
+  for (let i = 0; i < 180; i++) {
+    pieces.push({
+      x: Math.random() * canvas.width,
+      y: -Math.random() * canvas.height,
+      size: Math.random() * 8 + 4,
+      speed: Math.random() * 4 + 2,
+      angle: Math.random() * 6,
+      color: ["#e9a6bd","#f6cf83","#c5a5e8","#f5a9a9","#b7d9c5"][Math.floor(Math.random()*5)]
+    });
+  }
+  document.querySelector(".message-card").scrollIntoView({behavior:"smooth"});
+  animate();
+}
+
+let animation;
+
+function animate() {
+  cancelAnimationFrame(animation);
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  pieces.forEach((p) => {
+    ctx.save();
+    ctx.translate(p.x,p.y);
+    ctx.rotate(p.angle);
+    ctx.fillStyle = p.color;
+    ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size);
+    ctx.restore();
+    p.y += p.speed;
+    p.x += Math.sin(p.angle) * 1.5;
+    p.angle += 0.04;
+  });
+  pieces = pieces.filter(p => p.y < canvas.height + 20);
+  if(pieces.length > 0) animation = requestAnimationFrame(animate);
+}
+
+function openGift() {
+  document.getElementById("giftMessage").style.display = "block";
+  celebrate();
+}
+
+function floatingHearts() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = ["♡","💗","💕","✨"][Math.floor(Math.random()*4)];
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.fontSize = (15+Math.random()*20)+"px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(),6000);
+}
+setInterval(floatingHearts, 1100);
+</script>
+</body>
+</html>
